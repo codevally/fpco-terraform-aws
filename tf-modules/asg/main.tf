@@ -45,7 +45,7 @@ resource "aws_autoscaling_group" "cluster" {
   tags = ["${concat(
     list(
       map("key", "Name",
-          "value", "${var.name}-${var.suffix}",
+          "value", "${var.name_prefix}-${var.name_suffix}",
           "propagate_at_launch", true),
       ),
     var.extra_tags,
