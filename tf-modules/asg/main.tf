@@ -33,7 +33,7 @@ resource "aws_autoscaling_group" "cluster" {
   load_balancers            = ["${var.elb_names}"]
   max_size                  = "${var.max_nodes}"
   min_size                  = "${var.min_nodes}"
-  name                      = "${var.name}-${var.suffix}"
+  name                      = "${var.name_prefix}-${var.name_suffix}"
   placement_group           = "${var.placement_group}"
 
   lifecycle {
